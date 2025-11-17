@@ -27,7 +27,7 @@ def test_leer_producto_no_existente():
     resultado = leer_producto(999)
     assert resultado == "Error, el producto no fue encontrado"
 
-def test_leer_producto_no_error():
+def test_leer_producto_error():
     resultado = leer_producto(999)
     assert resultado == "Error, el producto quizas fue encontrado"
 
@@ -59,7 +59,7 @@ def test_eliminar_producto_no_existente():
     resultado = eliminar_producto(999)
     assert resultado == "Error, el producto no fue encontrado"
 
-def test_eliminar_producto_exito():
+def test_eliminar_producto_error():
     crear_producto(1, "Mouse", "Mouse óptico", 50.0, 10)
     resultado = eliminar_producto(1)
     assert resultado == "Producto no eliminado 1"
